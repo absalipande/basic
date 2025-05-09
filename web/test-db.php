@@ -15,9 +15,8 @@ try {
     echo "Attempting to connect to database...\n";
     echo "Configuration details:\n";
     echo "DSN: " . $config['dsn'] . "\n";
-    echo "Username: " . $config['username'] . "\n";
-    echo "Password value: '" . $config['password'] . "'\n";
-    echo "Password length: " . strlen($config['password']) . "\n";
+    echo "Username: [HIDDEN]\n";
+    echo "Password: [HIDDEN]\n";
     
     $db = new yii\db\Connection($config);
     $db->open();

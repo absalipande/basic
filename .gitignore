@@ -31,3 +31,22 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+# local database configuration file
+/config/db-local.php
+
+# runtime directory
+/runtime/*
+
+# web assets
+/web/assets/*
+
+# local environment files
+.env
+.env.*
+!.env.example
+
+# debug and test files
+/web/test-db.php
+/web/debug.php
+/web/test.php
