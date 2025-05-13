@@ -5,6 +5,7 @@ if (file_exists(__DIR__ . '/db-local.php')) {
 }
 
 return [
+    'class' => 'yii\db\Connection',
     'dsn' => $localConfig['dsn'] ?? 'pgsql:host=localhost;port=5432;dbname=yii2basic',
     'username' => $localConfig['username'] ?? 'postgres',
     'password' => $localConfig['password'] ?? '',
