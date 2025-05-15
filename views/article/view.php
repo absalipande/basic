@@ -10,9 +10,21 @@ $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="article-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
+
+    <p class="text-muted">
+        <small>
+            Created at: <?= Yii::$app->formatter->asRelativeTime($model->created_at) ?>
+            By: <?= $model->createdBy ? Html::encode($model->createdBy->username) : '(not set)' ?>
+        </small>
+    </p>
+
+    <div class="mb-3">
+        <?= Html::encode($model->body) ?>
+    </div>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -46,6 +58,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ]
         ],
     ]) ?>
-
 
 </div>
