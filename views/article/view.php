@@ -40,6 +40,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'updated_at',
                 'format' => ['datetime', 'php:Y-m-d H:i:s'],
             ],
+            [
+                'label' => 'Created By',
+                'value' => $model->createdBy ? $model->createdBy->username : '(not set)',
+            ]
         ],
     ]) ?>
 
