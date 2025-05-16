@@ -48,9 +48,14 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                // Add custom rules if needed
+                'article/<action:(create|index|update|delete)>' => 'article/<action>',
+                'article/<slug>' => 'article/view'
             ],
         ],
+        'formatter' => [
+            'datetimeFormat' => 'short'
+        ]
+
     ],
     'params' => $params,
 ];
